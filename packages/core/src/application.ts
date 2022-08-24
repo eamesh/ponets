@@ -1,4 +1,5 @@
-import { injectable } from 'inversify';
+import { inject, injectable } from 'inversify';
+import { KeybingRegistry } from './keybinding';
 
 export const ApplicationContribution = Symbol('Application');
 
@@ -8,11 +9,20 @@ export interface ApplicationContribution {
 
 @injectable()
 export class Application {
+
+  constructor(
+    @inject(KeybingRegistry) protected readonly keybindings: KeybingRegistry
+  ) {}
+
 	start (): void {
 		//
 	}
 
 	protected registerEventListeners(): void {
-		//
+		// keybings
+    document.addEventListener('keydown', event => {
+      // TODO ...
+      this.keybindings.run(event);
+    }, true);
 	}
 }
