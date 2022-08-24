@@ -1,0 +1,15 @@
+{
+  "extends": "../../tsconfig",
+  "compilerOptions": {
+    "composite": true,
+    "rootDir": "src",
+    "outDir": "lib",
+    "baseUrl": ".",
+    "types": [
+      "reflect-metadata"
+    ]
+  },
+  "include": [
+    "src"
+  ]
+}
