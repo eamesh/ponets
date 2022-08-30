@@ -14,8 +14,9 @@ export class Application {
     @inject(KeybingRegistry) protected readonly keybindings: KeybingRegistry
   ) {}
 
-	start (): void {
+	async start (): Promise<void> {
 		//
+    this.registerEventListeners();
 	}
 
 	protected registerEventListeners(): void {
