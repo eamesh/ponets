@@ -40,6 +40,7 @@ module.exports = defineConfig({
     'node/no-unpublished-require': 'off',
     'node/no-unsupported-features/es-syntax': 'off',
 
+    '@typescript-eslint/semi': 'error',
     '@typescript-eslint/ban-ts-comment': 'off',
     '@typescript-eslint/ban-types': 'off',
     '@typescript-eslint/explicit-module-boundary-types': [
@@ -61,6 +62,7 @@ module.exports = defineConfig({
       'error',
       { prefer: 'type-imports' },
     ],
+    '@typescript-eslint/member-delimiter-style': 'error',
 
     'sort-imports': [
       'error',

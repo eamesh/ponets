@@ -1,7 +1,7 @@
 import { inject, injectable } from 'inversify';
 import { KeybingRegistry } from './keybinding';
 
-export const ApplicationContribution = Symbol('Application');
+export const ApplicationContribution = Symbol('ApplicationContribution');
 
 export interface ApplicationContribution {
   initialize?(): void;
